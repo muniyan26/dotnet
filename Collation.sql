@@ -1,0 +1,6 @@
+select SERVERPROPERTY ('collation')
+select convert(sysname,DatabasePropertyEx('CS_AS_KS_WS','Collation'))
+select convert(sysname,DatabasePropertyEx(db_name(),'Collation')),db_name()
+select name, collation from syscolumns where [id]=object_id('MyDetail')
+select * from ::fn_helpcollations()
+select SERVERPROPERTY ('collation')
